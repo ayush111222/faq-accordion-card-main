@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    padding-top: 1rem;
+    background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+}
+main{
+    background-color: white;
+    width: 60rem;
+    min-height: 30rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+main .box-1{
+    background-image: url(images/illustration-woman-online-desktop.svg),url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left -5rem center, top -20rem left -35rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+main .box-1 .img-box{
+    position: absolute;
+    top: 40%;
+    left: -20%;
+}
+.inside-img{
+    display: none;
+}
+main .box-2{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+main .box-2 h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+   color: hsl(238, 29%, 16%);
+   margin-bottom: 1rem;
+}
+main .box-2 .container h2{
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 1rem 1rem 1rem 0;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    position: relative;
+    cursor: pointer;
+    color: hsl(237, 12%, 33%);
+}
+main .box-2 .container h2:hover{
+    color: hsl(14, 88%, 65%);
+}
+main .box-2 .container h2::after{
+    content: url(images/icon-arrow-down.svg);
+    position: absolute;
+    right: 0.5rem;
+}
+main .box-2 .container .panel{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+}
+main .box-2 .container p{
+    padding: 1rem;
+    font-weight: 400;
+    color: hsl(240, 6%, 50%);
+}
+main .box-2 .container .heading.active{
+    font-weight: bold;
+    border: none;
+}
+.active.heading::after{
+    transform: rotate(180deg);
+}
+@media (max-width:1070px) {
+    main{
+        width: 55rem;
+        
+    }
+}
+@media (max-width:1000px) {
+   body{
+    padding-top: 8rem;
+   }
+    main{
+        width: 25rem;
+        grid-template-columns: 25rem;
+        margin: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    main .box-1 {
+        background-image: none;
+        display: flex;
+        align-items: center;
+        position: relative;
+        min-height: auto;
+        display: flex;
+        justify-content: center;
+        min-height: 10rem;
+        background-image: url(images/bg-pattern-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 90%;
+    }
+    main .box-1 .img-box{
+        display: none;
+    }
+    main .box-2 h1{
+        padding: 0 0 0 1rem;
+    }
+  
+    main .box-2 .container h2{
+        font-size: 1rem;
+        font-weight: 400;
+        position: relative;
+        cursor: pointer;
+    }
+   
+    main .box-1 .inside-img{
+        display: block;
+        position: absolute;
+        width: 20rem;
+        top: -10rem;
+        margin-top: 1rem;
+    }
+}
+@media (max-width:500px){
+   main{
+        width: 20rem;
+        grid-template-columns: 25rem;
+        margin: 2rem;
+    }
+    main .box-1 .inside-img{
+        display: block;
+        position: absolute;
+        width: 15rem;
+        top: -8rem;
+        margin-top: 1rem;
+    }
+    main .box-1 {
+        background-image: url(images/bg-pattern-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 70%;
+    }
+    main .box-2 .container h2{
+        display: flex;
+        align-items: center;
+    }
+    main .box-2 .container h2::after{
+        content: url(images/icon-arrow-down.svg);
+        position: absolute;
+        right: 0;
+    }
+   
+}
